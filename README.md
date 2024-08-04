@@ -1,1 +1,1 @@
-#[ModKit Wiki](../../wiki)
+Regular KTANE module. 

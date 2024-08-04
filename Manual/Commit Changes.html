@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Commit Changes — Keep Talking and Nobody Explodes Module</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        q {
+            color: #22ffbb;
+            background-color: black;
+            padding: 5px;
+            text-decoration: none;
+        }
+        q::before, q::after {
+            content: '~';
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Commit Changes</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/GitCommitting.svg" class="diagram">
+                <h2>On the Subject of Commit Changes </h2>
+                    <p class="flavour-text">Should we commit it at friday?</p>
+                    <p>
+                        Module divided on 3 sections: some notes, a screen with filenames and a console button.
+                        There are repository name, contributer name and day of week on piece of paper.
+                        The screen with filenames below, which count can be from 5 to 8, buttons which switch filenames in cycle,
+                        a LED, which can be on of 3 states: red, yellow, green.
+                        On the bottom of the module there is the button, when pressed opens console.
+                    </p>
+                    <p>
+                        In order to solve the module, you must set each file correct state and commit them in correct order.
+                        You can commit files using console with Git commands (Appendix G1t).
+                        Every commit must include exactly one file.
+                        After all files commited, you must push changes in remote repository.
+                        If you done all correct, module will solve, otherwise handle strike, and show index of first wrong commited file.<br/>
+                        Note: After strike, module doesn't reseting. You must do it by yourself.
+                    </p>
+                    <h3>Initial files value</h3>
+                    <p>
+                        Take each symbol SN, each first symbol every file in number base 36 (1=1...A=10...Z=35),
+                        if that symbol is not a number and not a letter, use 13.<br/>
+                        Sum it up, modulo 256.
+                    </p>
+                    <h3>File value</h3>
+                    <p>
+                        Look all conditions in table on page 2.
+                        If the condition is true, do action at the column "Action".
+                    </p>
+                    <p>
+                        If the file value is less than zero, make him positive. That is the final file value(FFV).
+                        If number of files is even, sort them by his FFV in ascending order, otherwise in descending order.
+                        This is the order you must commit files.
+                        If you have same FFV for two files or more, first that appears on module is preferred.
+                    </p>
+                    <h3>Status coefficients</h3>
+                    <table>
+                        <tr>
+                            <th>Status</th>
+                            <th>Red</th>
+                            <th>Yellow</th>
+                            <th>Green</th>
+                        </tr>
+                        <tr>
+                            <th>Coefficient</th>
+                            <th>0.75</th>
+                            <th>1.5</th>
+                            <th>3</th>
+                        </tr>
+                    </table>
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 5</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Commit Changes</span>
+            </div>
+            <div class="page-content">
+                <p>+,-,*,/ is math operations addition, substraction, multiplication and division respectively.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>If file contains any number</th>
+                        <th>Add multiplication of numbers (0 count as 10)</th>
+                    </tr>
+                    <tr>
+                        <th>Contributer name has any not letter and not number symbol</th>
+                        <th>+50</th>
+                    </tr>
+                    <tr>
+                        <th>Contributer name has numbers</th>
+                        <th>*(number digits in name + 1)</th>
+                    </tr>
+                    <tr>
+                        <th>Filename has any not letter and not number symbol</th>
+                        <th>+12 per each such symbol</th>
+                    </tr>
+                    <tr>
+                        <th>Filename has uppercase letters</th>
+                        <th>+5 per each such letter</th>
+                    </tr>
+                    <tr>
+                        <th>Filename has more than one extensions</th>
+                        <th>*3</th>
+                    </tr>
+                    <tr>
+                        <th>Filename has lowercase letters</th>
+                        <th>-3 per each such letter</th>
+                    </tr>
+                    <tr>
+                        <th>Bomb has indicator CLR, FRQ, FRK, NSA</th>
+                        <th>+15 per indicator</th>
+                    </tr>
+                    <tr>
+                        <th>Contributer name has uppercase letters</th>
+                        <th>-20 per each uppercase letter</th>
+                    </tr>
+                    <tr>
+                        <th>Day of week on moudle is sunday, saturday or friday</th>
+                        <th>-30</th>
+                    </tr>
+                    <tr>
+                        <th>Day of week on moudle is monday, wednesday or thursday</th>
+                        <th>+20</th>
+                    </tr>
+                    <tr>
+                        <th>Bomb has at least RJ45, PS/2, Serial</th>
+                        <th>-10 per each such port</th>
+                    </tr>
+                    <tr>
+                        <th>Bomb has at least one module Scripting, brainf---, Markscript</th>
+                        <th>+69</th>
+                    </tr>
+                    <tr>
+                        <th>Bomb has at least one module Mortal Kombat, Etterna, Geometry Dash, Sonic the Hedgehog</th>
+                        <th>/2</th>
+                    </tr> 
+                </table>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 5</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Commit Changes</span>
+            </div>
+            <div class="page-content">
+                <h3>File status</h3>
+                <p>
+                    Take FFV, multiply on coefficient of initial status (Table on page 1).
+                    If number has any decimal, make him integer. Lets name him X. Then do bitwise XOR between X and
+                    multiplication of repository coefficient and Day of week coefficeint, modulo 2.
+                    This is the file final status.
+                </p>
+                <h3>Repository coefficient</h3>
+                <ul>
+                    <li>Sum up all alphabetical position of letter in repository name.</li>
+                    <li>Modulo number symbols multiply by 2.</li>
+                    <li>Add 1</li>
+                </ul>
+                <h3>Day of week coefficient</h3>
+                <p>
+                    Use day of week on module as row, and your real day of week(when the bomb launched) as column.
+                    The intersection will be your coefficient.
+                </p> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day of week</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thus</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>18</th>
+                        <th>14</th>
+                        <th>12</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>9</th>
+                        <th>6</th>
+                    </tr>
+                    <tr>
+                        <th>Tuesday</th>
+                        <th>16</th>
+                        <th>12</th>
+                        <th>8</th>
+                        <th>11</th>
+                        <th>8</th>
+                        <th>6</th>
+                        <th>7</th>
+                    </tr>
+                    <tr>
+                        <th>Wednesday</th>
+                        <th>15</th>
+                        <th>13</th>
+                        <th>12</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>8</th>
+                        <th>10</th>
+                    </tr>
+                    <tr>
+                        <th>Thusday</th>
+                        <th>13</th>
+                        <th>10</th>
+                        <th>10</th>
+                        <th>2</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                    </tr>
+                    <tr>
+                        <th>Friday</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>7</th>
+                        <th>6</th>
+                        <th>8</th>
+                        <th>6</th>
+                        <th>7</th>
+                    </tr>
+                    <tr>
+                        <th>Saturday</th>
+                        <th>7</th>
+                        <th>12</th>
+                        <th>6</th>
+                        <th>6</th>
+                        <th>4</th>
+                        <th>4</th>
+                        <th>5</th>
+                    </tr>
+                    <tr>
+                        <th>Sunday</th>
+                        <th>5</th>
+                        <th>4</th>
+                        <th>4</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>3</th>
+                        <th>1</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">Page 3 of 5</div>
+        </div>
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Commit Changes</span>
+            </div>
+            <div class="page-content">
+                <h2>Appendix G1t</h2>
+                <p>
+                    Our company uses AI for helping you, so you don't need to add in your commands mandatory parameters by yourself.
+                </p>
+                <h3><q>git add [filename]</q></h3>
+                <p>
+                    Adding file. Setting status 1 when commited.
+                    Also you can use file index instead filename, where first file appears on module is one.
+                </p>
+                <h3><q>git rm [filename]</q></h3>
+                <p>
+                    Removing file. Setting status 0 when commited.
+                    Also you can use file index instead filename, where first file appears on module is one.
+                </p>
+                <h3><q>git commit</q></h3>
+                <p>
+                    Committing changes. Note: in one commit must be exactly one file.
+                    If in the commit be more than one file or zero, module will strike immediately.
+                </p>
+                <h3><q>git push</q></h3>
+                <p>
+                    Pushing all commits in remote repository. While command is inputed, module will check solution.
+                    If your solution is correct module will be solved. Otherwise module will strike and show first wrong file.
+                </p>
+                <h3><q>git status</q></h3>
+                <p>
+                    Показывает текущее состояние репозитория, те файлы которые были добавлены/удалены.
+                    Например, если только что произошёл коммит, то эта команда покажет <q>clear</q>, так как от предыдущего коммита и
+                    текущего состояния репозитория нет отличий.
+                    При выполнении команды <q>git add</q>, покажется файл, который был добавлен.
+                    Аналогично работает с <q>git rm</q>, будет показан файл, который был удалён.
+                    Команда необходима для проверки того, что вы коммитите.
+                </p>
+            </div>
+            <div class="page-footer relative-footer">Page 4 of 5</div>
+        </div>
+        <div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Commit Changes</span>
+            </div>
+            <div class="page-content">
+                <h3><q>git reset HEAD</q></h3>
+                <p>
+                    Возвращает репозиторий к состоянию до команды <q>git add/rm</q>. (То есть, до состояния репозитория после коммита)
+                </p>
+                <h3><q>git reset 3f496</q></h3>
+                <p>
+                    Возвращает репозиторий к изначальному состоянию. (То есть, при инициализации модуля)
+                </p>
+                    <h3><q>clear</q></h3>
+                <p>
+                    Clear console.
+                </p>
+                <h3><q>back</q></h3>
+                <p>
+                    Close console.
+                </p>
+                <p>
+                    *If you have a lit BOB, day of week on module is sunday <u>AND</u> more than two battaries, so
+                    Bob DDoSing Github. You can sleep piecefully. In order to solve module, do <q>git push</q>.  
+                </p>
+            </div>
+            <div class="page-footer relative-footer">Page 5 of 5</div>
+        </div>
+    </div>
+</body>
+</html>
