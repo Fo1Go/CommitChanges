@@ -359,7 +359,17 @@ Prefab:
         type: 2}
       propertyPath: AudioClips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: dfa4a84b65acc0e429a6f810d09afafd, type: 3}
+      objectReference: {fileID: 8300000, guid: c4d0145d53159cd488db04f6a5aa88b7, type: 3}
+    - target: {fileID: 114848120511536268, guid: 8814ea52310d2614a9feda02ec355ae4,
+        type: 2}
+      propertyPath: TimeLimit
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848120511536268, guid: 8814ea52310d2614a9feda02ec355ae4,
+        type: 2}
+      propertyPath: StrikeCount
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
   m_IsPrefabParent: 0

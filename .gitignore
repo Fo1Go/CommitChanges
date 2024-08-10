@@ -33,3 +33,5 @@ sysinfo.txt
 Assets/Generated
 Gen
 
+*.meta
+.idea/

@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4723291086382356}
   m_Layer: 0
-  m_Name: submittion
+  m_Name: submitting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 102394235686804674}
   - component: {fileID: 114578567758801408}
   m_Layer: 0
-  m_Name: userText
+  m_Name: consoleStartingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 23510246475390360}
   - component: {fileID: 114060460196611418}
   m_Layer: 0
-  m_Name: indicator
+  m_Name: ColoredIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 23733387614827014}
   - component: {fileID: 114559408080267984}
   m_Layer: 0
-  m_Name: sumbitBG
+  m_Name: submittingBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4386527999216632}
   m_Layer: 0
-  m_Name: indicator
+  m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 33812950828865702}
   - component: {fileID: 114620959395870288}
   m_Layer: 0
-  m_Name: submitionFieldHighlight
+  m_Name: submittingFieldHighlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -591,7 +591,7 @@ GameObject:
   - component: {fileID: 102279265273980572}
   - component: {fileID: 114462273768692310}
   m_Layer: 0
-  m_Name: labelSubmitionText
+  m_Name: labelSubmittingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 114977680226740740}
   - component: {fileID: 114832755838267476}
   m_Layer: 0
-  m_Name: submitionField
+  m_Name: submittingField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,8 +963,8 @@ Transform:
   m_LocalPosition: {x: -0.065, y: 0.016, z: 0.055}
   m_LocalScale: {x: 1, y: 1, z: 0.8}
   m_Children:
-  - {fileID: 4766066625512438}
   - {fileID: 4786906908584892}
+  - {fileID: 4766066625512438}
   - {fileID: 4871634750971486}
   - {fileID: 4178268553921134}
   m_Father: {fileID: 4906044295479040}
@@ -1016,7 +1016,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1082324409433530}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.212, y: 0.6, z: -0.35}
+  m_LocalPosition: {x: 0.1, y: 0.6, z: -0.35}
   m_LocalScale: {x: 0.1, y: 0.3, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4803657930912624}
@@ -1084,7 +1084,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1152788103854946}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.05, y: 0.6, z: 0.27}
+  m_LocalPosition: {x: -0.4, y: 0.6, z: 0.25}
   m_LocalScale: {x: 0.1, y: 0.3, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4803657930912624}
@@ -1160,7 +1160,7 @@ Transform:
   m_LocalScale: {x: 0.010000003, y: 0.010000007, z: 0}
   m_Children: []
   m_Father: {fileID: 4386527999216632}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!4 &4786906908584892
 Transform:
@@ -1176,7 +1176,7 @@ Transform:
   - {fileID: 4012979716572152}
   - {fileID: 4122405261025902}
   m_Father: {fileID: 4386527999216632}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4800993184076616
 Transform:
@@ -1185,7 +1185,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994438059055354}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.07, y: 0.6, z: -0.065}
+  m_LocalPosition: {x: -0.25, y: 0.6, z: -0.065}
   m_LocalScale: {x: 0.1, y: 0.3, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4803657930912624}
@@ -1246,7 +1246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1239210079910284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 0.1, y: 0.05, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4830223023762220}
@@ -2727,7 +2727,7 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 2
-  m_Anchor: 4
+  m_Anchor: 3
   m_Alignment: 0
   m_TabSize: 2
   m_FontSize: 68
@@ -2748,7 +2748,7 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 2
-  m_Anchor: 5
+  m_Anchor: 3
   m_Alignment: 0
   m_TabSize: 2
   m_FontSize: 68
@@ -2866,16 +2866,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfc93f0ce937484285a3c637efa9fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Audio: {fileID: 114151578323003562}
-  Module: {fileID: 114140463664148306}
-  Bomb: {fileID: 114720510897345510}
+  sound: {fileID: 114151578323003562}
+  module: {fileID: 114140463664148306}
+  bomb: {fileID: 114720510897345510}
   colourblind: {fileID: 114864501697309002}
-  BtnPrev: {fileID: 114154159507679016}
-  BtnNext: {fileID: 114018481795604692}
-  BtnSubmit: {fileID: 114832755838267476}
-  keyboardSound: {fileID: 8300000, guid: bd29cfd16a27bdf4e8bd2937b815573a, type: 3}
-  buttonPressedSound: {fileID: 8300000, guid: dfa4a84b65acc0e429a6f810d09afafd, type: 3}
-  consoleOpensSound: {fileID: 8300000, guid: 8f3ba725cbc976e4d82c9a33e3f5ec51, type: 3}
+  btnPrev: {fileID: 114154159507679016}
+  btnNext: {fileID: 114018481795604692}
+  btnSubmit: {fileID: 114832755838267476}
   screen: {fileID: 102012315102730360}
   consoleTM: {fileID: 102279265273980572}
   repository: {fileID: 102906826734928116}

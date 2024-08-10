@@ -29,40 +29,43 @@
                 <span class="page-header-section-title">Commit Changes</span>
             </div>
             <div class="page-content">
-                <img src="img/Component/GitCommitting.svg" class="diagram">
-                <h2>On the Subject of Commit Changes </h2>
+                <img src="img/Component/CommitChanges.svg" class="diagram">
+                <h2>On the Subject of Commit Changes</h2>
                     <p class="flavour-text">Should we commit it at friday?</p>
+                    <p>Module divided on 3 sections.</p>
+                    <ul>
+                        <li>A paper with notes which consists on it a repository name, contributer name and day of week.</li>
+                        <li>
+                            The screen with file names below, the number of which can be in range from 3 up to 5,
+                            buttons that switch file names in cycle, a colored LED, that can be one of three states: red, yellow, green.
+                        </li>
+                        <li>At the bottom of the module there is a button that, when pressed, opens the console.</li>
+                    </ul>
                     <p>
-                        Module divided on 3 sections: some notes, a screen with filenames and a console button.
-                        There are repository name, contributer name and day of week on piece of paper.
-                        The screen with filenames below, which count can be from 5 to 8, buttons which switch filenames in cycle,
-                        a LED, which can be on of 3 states: red, yellow, green.
-                        On the bottom of the module there is the button, when pressed opens console.
-                    </p>
-                    <p>
-                        In order to solve the module, you must set each file correct state and commit them in correct order.
+                        In order to solve the module, you must set to each file correct state and commit them in correct order.
                         You can commit files using console with Git commands (Appendix G1t).
                         Every commit must include exactly one file.
-                        After all files commited, you must push changes in remote repository.
+                        After all files commited, you must push changes in remote repository.<br/>
                         If you done all correct, module will solve, otherwise handle strike, and show index of first wrong commited file.<br/>
-                        Note: After strike, module doesn't reseting. You must do it by yourself.
+                        <b>Note</b>: After strike, module doesn't reset input. You must do it by yourself.
                     </p>
                     <h3>Initial files value</h3>
                     <p>
-                        Take each symbol SN, each first symbol every file in number base 36 (1=1...A=10...Z=35),
-                        if that symbol is not a number and not a letter, use 13.<br/>
-                        Sum it up, modulo 256.
+                        Take each character of SN, each first symbol every file in number base 36 (1=1...A=10...Z=35),
+                        if that symbol is not a number and not a letter, count it as 13.<br/>
+                        Sum it up and modulo 256.
                     </p>
                     <h3>File value</h3>
                     <p>
                         Look all conditions in table on page 2.
                         If the condition is true, do action at the column "Action".
+                        +, -, *, / is math operations addition, substraction, multiplication and division respectively.
                     </p>
                     <p>
                         If the file value is less than zero, make him positive. That is the final file value(FFV).
-                        If number of files is even, sort them by his FFV in ascending order, otherwise in descending order.
+                        If amount of files is even, sort them by his FFV in ascending order, otherwise in descending order.
                         This is the order you must commit files.
-                        If you have same FFV for two files or more, first that appears on module is preferred.
+                        If you have same FFV for two or more files, first that appears on module (going right) is preferred.
                     </p>
                     <h3>Status coefficients</h3>
                     <table>
@@ -88,7 +91,6 @@
                 <span class="page-header-section-title">Commit Changes</span>
             </div>
             <div class="page-content">
-                <p>+,-,*,/ is math operations addition, substraction, multiplication and division respectively.</p>
                 <table>
                     <thead>
                         <tr>
@@ -109,19 +111,19 @@
                         <th>*(number digits in name + 1)</th>
                     </tr>
                     <tr>
-                        <th>Filename has any not letter and not number symbol</th>
+                        <th>File name has any not letter and not number symbol</th>
                         <th>+12 per each such symbol</th>
                     </tr>
                     <tr>
-                        <th>Filename has uppercase letters</th>
+                        <th>File name has uppercase letters</th>
                         <th>+5 per each such letter</th>
                     </tr>
                     <tr>
-                        <th>Filename has more than one extensions</th>
+                        <th>File name has more than one extensions</th>
                         <th>*3</th>
                     </tr>
                     <tr>
-                        <th>Filename has lowercase letters</th>
+                        <th>File name has lowercase letters</th>
                         <th>-3 per each such letter</th>
                     </tr>
                     <tr>
@@ -171,9 +173,9 @@
                 </p>
                 <h3>Repository coefficient</h3>
                 <ul>
-                    <li>Sum up all alphabetical position of letter in repository name.</li>
-                    <li>Modulo number symbols multiply by 2.</li>
-                    <li>Add 1</li>
+                    <li>Sum up all alphabetical position of letter in repository name.(A=1, Z=26)</li>
+                    <li>Modulo (amount characters multiply by 2).</li>
+                    <li>Then add 1</li>
                 </ul>
                 <h3>Day of week coefficient</h3>
                 <p>
@@ -275,18 +277,15 @@
             </div>
             <div class="page-content">
                 <h2>Appendix G1t</h2>
-                <p>
-                    Our company uses AI for helping you, so you don't need to add in your commands mandatory parameters by yourself.
-                </p>
-                <h3><q>git add [filename]</q></h3>
+                <h3><q>git add [file name]</q></h3>
                 <p>
                     Adding file. Setting status 1 when commited.
-                    Also you can use file index instead filename, where first file appears on module is one.
+                    Also you can use file index instead file name, where first file appears on module is one.
                 </p>
-                <h3><q>git rm [filename]</q></h3>
+                <h3><q>git rm [file name]</q></h3>
                 <p>
                     Removing file. Setting status 0 when commited.
-                    Also you can use file index instead filename, where first file appears on module is one.
+                    Also you can use file index instead file name, where first file appears on module is one.
                 </p>
                 <h3><q>git commit</q></h3>
                 <p>
@@ -300,12 +299,11 @@
                 </p>
                 <h3><q>git status</q></h3>
                 <p>
-                    Показывает текущее состояние репозитория, те файлы которые были добавлены/удалены.
-                    Например, если только что произошёл коммит, то эта команда покажет <q>clear</q>, так как от предыдущего коммита и
-                    текущего состояния репозитория нет отличий.
-                    При выполнении команды <q>git add</q>, покажется файл, который был добавлен.
-                    Аналогично работает с <q>git rm</q>, будет показан файл, который был удалён.
-                    Команда необходима для проверки того, что вы коммитите.
+                    Shows current state of repository.
+                    For example: if a commit has just occurred, since there is no difference between the previous commit
+                    and the current state of the repository, so module will show message "".
+                    If previos command was command <q>git add</q>, it will show added file.
+                    Also works with<q>git rm</q>.
                 </p>
             </div>
             <div class="page-footer relative-footer">Page 4 of 5</div>
@@ -318,22 +316,25 @@
             <div class="page-content">
                 <h3><q>git reset HEAD</q></h3>
                 <p>
-                    Возвращает репозиторий к состоянию до команды <q>git add/rm</q>. (То есть, до состояния репозитория после коммита)
+                    Reverts the repository to the state before the command <q>git add/rm</q>.
                 </p>
                 <h3><q>git reset 3f496</q></h3>
                 <p>
-                    Возвращает репозиторий к изначальному состоянию. (То есть, при инициализации модуля)
+                    Reverts the repository to the initial state. (When module initializes)
                 </p>
                     <h3><q>clear</q></h3>
                 <p>
-                    Clear console.
+                    Clears the console.
                 </p>
                 <h3><q>back</q></h3>
                 <p>
-                    Close console.
+                    Closes the console.
                 </p>
                 <p>
-                    *If you have a lit BOB, day of week on module is sunday <u>AND</u> more than two battaries, so
+                    *Our company uses AI for helping you, so you don't need to add in your commands mandatory parameters by yourself.
+                </p>
+                <p>
+                    **If you have a lit BOB, day of week on module is sunday <u>AND</u> more than two battaries, so
                     Bob DDoSing Github. You can sleep piecefully. In order to solve module, do <q>git push</q>.  
                 </p>
             </div>

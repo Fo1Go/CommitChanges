@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Name: ModConfig
   m_EditorClassIdentifier: 
   id: CommitChanges
-  title: Commit changes
+  title: Commit Changes
   author: FolGo
-  description: 
+  description: 'There is a module about git. In order to solve this module you must
+    commit files in correct order using git commands.
+
+
+    Manual can be found at ktane.timwi.de or in the manuals folder of your game.
+
+
+    Author: FolGo
+
+'
   version: 1.0.0
   outputFolder: build
-  previewImage: {fileID: 0}
+  previewImage: {fileID: 2800000, guid: 877710af2b37cd14784f22f1bd6292e9, type: 3}

@@ -1,248 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3823dc4-bf96-4830-abd4-8510c0d6e49d" name="Changes" comment="">
+    <list default="true" id="0f436a82-1bbe-4b9e-ae75-0c195e145d8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3x3 Square Bomb.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3x3 Square Bomb.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/D-Battery.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/D-Battery.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.1 Module.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.1 Module/ExampleModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.1 Module/ExampleModule.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.1 Module/ExampleModule.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.1 Module/ExampleModule.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.10 NeedyModule.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.10 NeedyModule/ExampleNeedyModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.10 NeedyModule/ExampleNeedyModule.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.10 NeedyModule/NeedyModule.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.10 NeedyModule/NeedyModule.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/TableOfContents.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/TableOfContents.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/example_mission_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/example_mission_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/example_mission_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/example_mission_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/example_mission_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.11 Missions/example_mission_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/Backing.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/Backing.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/BombCreator.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/BombCreator.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/BombCreatorExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/BombCreatorExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/Button.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/Button.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/Font Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.12 Holdable/Font Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.13 GameEffectsPlayer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.13 GameEffectsPlayer/GameEffectPlayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.13 GameEffectsPlayer/GameEffectPlayer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.13 GameEffectsPlayer/GameEffectPlayer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.13 GameEffectsPlayer/GameEffectPlayer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.2 Module2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.2 Module2/ExampleModule2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.2 Module2/ExampleModule2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.2 Module2/ExampleModule2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.2 Module2/ExampleModule2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.3 GameplayRoom.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.3 GameplayRoom/ExampleGameplayRoom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.3 GameplayRoom/ExampleGameplayRoom.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.3 GameplayRoom/ExampleGameplayRoom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.3 GameplayRoom/ExampleGameplayRoom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.4 SetupRoom.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.4 SetupRoom/ExampleSetupRoom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.4 SetupRoom/ExampleSetupRoom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.5 WebService.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.5 WebService/ExampleWebService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.5 WebService/ExampleWebService.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.5 WebService/ExampleWebService.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.5 WebService/ExampleWebService.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.6 Bomb Casing.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.6 Bomb Casing/Reference Bomb.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.6 Bomb Casing/Reference Bomb.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/FastBeep.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/FastBeep.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/FastestBeep.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/FastestBeep.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/NormalBeep.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/NormalBeep.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/doublebeep.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/doublebeep.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/doublebeep125.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/doublebeep125.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/singlebeep.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.7 Sound Replacement/singlebeep.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.8 Button Masher Module.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.8 Button Masher Module/ButtonMasherModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.8 Button Masher Module/ButtonMasherModule.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.8 Button Masher Module/ButtonMasherModule.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.8 Button Masher Module/ButtonMasherModule.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.8 Button Masher Module/tick.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.8 Button Masher Module/tick.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.9 Widget.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.9 Widget/ExampleWidget.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.9 Widget/ExampleWidget.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.9 Widget/ExampleWidget.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/1.9 Widget/ExampleWidget.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/AlarmClock.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/AlarmClock.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/Bomb.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/Bomb.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/Default.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/Default.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/DefaultAlarmClock.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/DefaultAlarmClock.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/DefaultBomb.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/DefaultBomb.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/DefaultDossier.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/DefaultDossier.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/Dossier.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/Dossier.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/FacilityRoomCamera.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/FacilityRoom/FacilityRoomCamera.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/BombBinder.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/BombBinder.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/Default.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/Default.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultBombBinder.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultBombBinder.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultDossier.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultDossier.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultFP.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultFP.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultModManagerHoldable.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/DefaultModManagerHoldable.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/Dossier.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/Dossier.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/FreePlay.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/FreePlay.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/ModManagerHoldable.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/ModManagerHoldable.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/SetupRoomCamera.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/Camera/SetupRoom/SetupRoomCamera.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/NeedyBacking.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/NeedyBacking/Inactive.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/NeedyBacking/Inactive.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/NeedyBacking/NeedyBackingAnimController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/NeedyBacking/NeedyBackingAnimController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/NeedyBacking/PanicAnim.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Animations/NeedyBacking/PanicAnim.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Materials/ButtonMasherButton.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Materials/ButtonMasherButton.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Materials/ButtonMasherMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Materials/ButtonMasherMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Materials/NeedyModuleButton.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Materials/NeedyModuleButton.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Bomb_casing.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Bomb_casing.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Bomb_casing_highlight.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Bomb_casing_highlight.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_Highlight.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_Highlight.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_Keypad.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_Keypad.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_Needy_Background.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_Needy_Background.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_PuzzleBackground.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Component_PuzzleBackground.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_Background.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_Background.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_LED_OFF.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_LED_OFF.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_LED_ON.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_LED_ON.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_LED_WRONG.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Keypad_LED_WRONG.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Needy_Background.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Needy_Background.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Needy_Background_Active.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_Needy_Background_Active.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_PuzzleBackground.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Components/Materials/Component_PuzzleBackground.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/Bomb_casing.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/Bomb_casing.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/Missile.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/Missile.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/No Name.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/No Name.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/transparentQuads.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Materials/transparentQuads.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Missile.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/Missile.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/PaddedQuad.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/PaddedQuad.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/PaddedQuad64.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Models/PaddedQuad64.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/BlendTwoTexturesLitAndUnlit.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/BlendTwoTexturesLitAndUnlit.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/BlendTwoTexturesLitAndUnlitVertexColor.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/BlendTwoTexturesLitAndUnlitVertexColor.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/BlendTwoTexturesUnlit.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/BlendTwoTexturesUnlit.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_3D_Text-Diffuse.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_3D_Text-Diffuse.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_3D_Text.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_3D_Text.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_Mobile-Diffuse-tint.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_Mobile-Diffuse-tint.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_Mobile-Diffuse.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/KT_Mobile-Diffuse.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/MobileTransparentDiffuseUnderlay.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/MobileTransparentDiffuseUnderlay.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/UnlitTexturedLightmap.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/UnlitTexturedLightmap.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/UnlitTransparentVertexColorUnderlay.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Shaders/UnlitTransparentVertexColorUnderlay.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Bomb_casing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Bomb_casing.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_Background.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_LED_OFF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_LED_OFF.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_LED_ON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_LED_ON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_LED_RED.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Keypad_LED_RED.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Needy_Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_Needy_Background.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_PuzzleBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Components/Component_PuzzleBackground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/LightGlow.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/LightGlow/LightGlow.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/LightGlow/LightGlow.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/LightGlow/LightGlow_Cone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/LightGlow/LightGlow_Cone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Shadows.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Shadows/RectangularShadow.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/Assets/Textures/Shadows/RectangularShadow.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/example.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Examples/example.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manual/Template Manual.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CommitChanges.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CommitChanges.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CommitChanges.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CommitChanges.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,40 +19,46 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/CommitChanges.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Files.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
-  <component name="ProjectId" id="2kA32S5Wtkvrb9859gVJQOKo8sV" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2kFozItk0klGfIKDAfR6UN04G1S" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\User\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\User\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e3823dc4-bf96-4830-abd4-8510c0d6e49d" name="Changes" comment="" />
-      <created>1722712347332</created>
+      <changelist id="0f436a82-1bbe-4b9e-ae75-0c195e145d8e" name="Changes" comment="" />
+      <created>1722888947361</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1722712347332</updated>
-      <workItem from="1722712348663" duration="203000" />
+      <updated>1722888947361</updated>
+      <workItem from="1722888950888" duration="334000" />
+      <workItem from="1722889590919" duration="44000" />
     </task>
     <servers />
   </component>
