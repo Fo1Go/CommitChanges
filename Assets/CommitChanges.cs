@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using KModkit;
 using Random = UnityEngine.Random;
@@ -20,7 +21,8 @@ public class CommitChanges : MonoBehaviour
     {
         {"keyPressed", "key-pressed"},
         {"consoleOpens", "console-opening"},
-        {"buttonPressed", "SwitchSound"}
+        {"buttonPressed", "SwitchSound"},
+        {"SolvingSound", "SolvingSound"},
     };
 
     private int _maxLengthInput;
@@ -33,8 +35,11 @@ public class CommitChanges : MonoBehaviour
 
     private readonly List<string> _possiblesRepositories = new List<string>()
     {
-        "KtaneContent", "GoldenApple", "NotStrangeProject", "HelloWorld", 
-        "TFCThirdUltra", "UnityEngineCode", "HexOSFreeDOS", "SteamOperation", "UbuntuSource", "WindowsThree"
+        "KtaneContent", "GoldenApple", "StrangeProject", "HelloWorld", 
+        "TFCThirdUltra", "UnityEngineCode", "HexOS", "ValvesSteam",
+        "UbuntuSource", "WindowsNine", "KeepTalking", "ThirdTry",
+        "GitStudying", "UnityProject", "Pentagon", "FifthCommit",
+        "YoutubeSrc", "SnapChatRepo", "qwertyuiop"
     };
 
     private string _contributorName;
@@ -43,10 +48,13 @@ public class CommitChanges : MonoBehaviour
     {
         "_Play_", "poisongreen", "Megum",
         "Timwi", "samfundev", "Kuro",
-        "Emik", "Blananas2", "eXish", "Speakingevil",
+        "Emik", "Blananas2", "eXish", "SpeakingEvil",
         "Royal_Flu$h", "rand06", "Hexicube",
         "SL7205", "BigCrunch22", "Deaf", "Hawker",
-        "SteelCrateGames", "QuinnWuest"
+        "SteelCrateGames", "QuinnWuest", "GhostSalt",
+        "BigCrunch22", "Awesome7285", "TylerY2992",
+        "ObjectsCountries", "GoodHood", "lingomaniac88",
+        "Obvious", "Eltrick", "Crazycaleb",
     };
 
     private int _dayOfWeekCoefficient;
@@ -56,7 +64,12 @@ public class CommitChanges : MonoBehaviour
     { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
     private bool _isColourblindActive;
-
+    private readonly List<string> _possiblesCommands = new List<string>()
+    {
+        "git",
+        "back",
+        "clear"
+    }; 
     private readonly List<Files> _allFiles = new List<Files>();
     private Files _currentFile;
     private int _currentFileIndex;
@@ -77,8 +90,11 @@ public class CommitChanges : MonoBehaviour
     private Files _currentCommittingFile;
 
     private List<MeshRenderer> _allObjects;
+    private Color32 _colorRed = new Color32(255, 0, 0, 255);
+    private Color32 _colorGreen = new Color32(0, 200, 0, 255);
+    private Color32 _colorWhite = new Color32(255, 255, 255, 255);
 
-    // 0 - red, 1 - yellow, 2 - green
+    // 0 - red, 1 - green
     private readonly List<MeshRenderer> _indicatorElements = new List<MeshRenderer>();
 
     void Awake()
@@ -103,11 +119,6 @@ public class CommitChanges : MonoBehaviour
         Init();
     }
 
-    void SetColourblindMode()
-    {
-        colorblindText.gameObject.SetActive(_isColourblindActive);
-    }
-
     private void Init()
     {
         _indicatorElements.Add(indicator.transform.Find("top").GetComponent<MeshRenderer>());
@@ -125,6 +136,7 @@ public class CommitChanges : MonoBehaviour
 
         consoleTM.GetComponent<Renderer>().enabled = false;
         _currentFileIndex = 0;
+        screen.color = _currentFileIndex == 0 ? Color.green : Color.white;
         _currentFile = _allFiles[_currentFileIndex];
         SetScreen(_currentFile.Name);
         SetIndicator(_currentFile.Status);
@@ -144,7 +156,7 @@ public class CommitChanges : MonoBehaviour
         _isConsoleOpen = false;
         _isAnimating = false;
         _isTyping = true;
-        _maxLengthInput = 40;
+        _maxLengthInput = 35;
         _maxLinesLength = 10;
         _animationDuration = .2f;
         _amountLines = 0;
@@ -168,7 +180,7 @@ public class CommitChanges : MonoBehaviour
         // Finding answer
         double startingValue = FindStartingValueForFile();
         _dayOfWeekCoefficient = (int)FindDayOfWeekCoefficient();
-        _repositoryCoefficient = (int)Find_repositoryCoefficient();
+        _repositoryCoefficient = (int)FindRepositoryCoefficient();
         
         Log(String.Format("Starting file value is {0}", startingValue));
         Log("Repository coefficient is " + _repositoryCoefficient);
@@ -179,6 +191,7 @@ public class CommitChanges : MonoBehaviour
             file.Status = FindStatusForFile(file, startingValue);
             file.Value = FindValueForFile(file, startingValue);
         }
+
 
         _answerFiles = _allFiles.Count % 2 == 0 ?
             _answerFiles.OrderBy(file => file.Value).ToList() :
@@ -196,6 +209,11 @@ public class CommitChanges : MonoBehaviour
         Log(String.Format("Solution(in order committing):\n{0}", filesString));
     }
 
+    void SetColourblindMode()
+    {
+        colorblindText.gameObject.SetActive(_isColourblindActive);
+    }
+
     private void Next()
     {
         btnNext.AddInteractionPunch(.5f);
@@ -203,6 +221,8 @@ public class CommitChanges : MonoBehaviour
         _currentFileIndex += 1;
         if (_currentFileIndex > _allFiles.Count - 1)
             _currentFileIndex = 0;
+        
+        screen.color = _currentFileIndex == 0 ? Color.green : Color.white;
 
         _currentFile = _allFiles[_currentFileIndex];
         SetScreen(_currentFile.Name);
@@ -216,6 +236,8 @@ public class CommitChanges : MonoBehaviour
         _currentFileIndex -= 1;
         if (_currentFileIndex < 0)
             _currentFileIndex = _allFiles.Count - 1;
+        
+        screen.color = _currentFileIndex == 0 ? Color.green : Color.white;
 
         _currentFile = _allFiles[_currentFileIndex];
         SetScreen(_currentFile.Name);
@@ -268,51 +290,15 @@ public class CommitChanges : MonoBehaviour
     {
         if (_allObjects == null)
         {
-            MeshRenderer infoPlate = module.transform.Find("infoPlate").GetComponent<MeshRenderer>();
-            _allObjects = new List<MeshRenderer>()
-            {
-                btnPrev.GetComponent<MeshRenderer>(),
-                btnNext.GetComponent<MeshRenderer>(),
-                repository.GetComponent<MeshRenderer>(),
-                contributor.GetComponent<MeshRenderer>(),
-                dayOfWeek.GetComponent<MeshRenderer>(),
-                colorblindText.GetComponent<MeshRenderer>(),
-                screen.GetComponent<MeshRenderer>(),
-                infoPlate,
-                module.transform.Find("submitting").transform.Find("submittingBG").GetComponent<MeshRenderer>(),
-                module.transform.Find("submitting").transform.Find("submittingField").transform.Find("consoleStartingText")
-                   .GetComponent<MeshRenderer>(),
-                module.transform.Find("fileManager").transform.Find("Indicator").transform.Find("top")
-                   .GetComponent<MeshRenderer>(),
-                module.transform.Find("fileManager").transform.Find("Indicator").transform.Find("bottom")
-                   .GetComponent<MeshRenderer>(),
-                module.transform.Find("fileManager").transform.Find("screen").transform.Find("screen")
-                    .GetComponent<MeshRenderer>(),
-            };
-            List<Transform> pins = new List<Transform>
-            {
-                infoPlate.transform.Find("pin1"),
-                infoPlate.transform.Find("pin2"),
-                infoPlate.transform.Find("pin3"),
-            };
-            foreach (var pin in pins)
-            {
-                int children = pin.transform.childCount;
-                for (int i = 0; i < children; ++i)
-                    _allObjects.Add(pin.transform.GetChild(i).GetComponent<MeshRenderer>());
-            }
+            GatherAllElement();
         }
 
         bool shown = _isConsoleOpen;
         foreach (var obj in _indicatorElements)
-        {
             obj.GetComponent<Renderer>().enabled = shown;
-        }
 
         foreach (var obj in _allObjects)
-        {
             obj.GetComponent<Renderer>().enabled = shown;
-        }
 
         Transform btnPrevHl = btnPrev.transform.Find("PH"),
             btnNextHl = btnNext.transform.Find("NH"),
@@ -322,7 +308,6 @@ public class CommitChanges : MonoBehaviour
             btnSubmitHl.localScale = new Vector3(1.015f, 1f, 1.015f);
             btnNextHl.localScale = new Vector3(1.1f, 0.5f, 1.1f);
             btnPrevHl.localScale = new Vector3(1.1f, 0.5f, 1.1f);
-
             consoleTM.GetComponent<Renderer>().enabled = false;
         }
         else
@@ -341,16 +326,54 @@ public class CommitChanges : MonoBehaviour
     private int GetAlphabeticPosition(char letter)
     {
         if (Char.IsDigit(letter))
-        {
             return letter - '0';
-        }
 
-        return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".IndexOf(letter) + 1;
+        return GetBase36Number(letter) - 9;
     }
 
     private int GetBase36Number(char letter)
     {
-        return "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".IndexOf(letter);
+        return "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".IndexOf(Char.ToUpper(letter));
+    }
+
+    private void GatherAllElement()
+    {
+        MeshRenderer infoPlate = module.transform.Find("infoPlate").GetComponent<MeshRenderer>();
+            
+        _allObjects = new List<MeshRenderer>()
+        {
+            btnPrev.GetComponent<MeshRenderer>(),
+            btnNext.GetComponent<MeshRenderer>(),
+            repository.GetComponent<MeshRenderer>(),
+            contributor.GetComponent<MeshRenderer>(),
+            dayOfWeek.GetComponent<MeshRenderer>(),
+            colorblindText.GetComponent<MeshRenderer>(),
+            screen.GetComponent<MeshRenderer>(),
+            infoPlate,
+            module.transform.Find("submitting").transform.Find("submittingBG").GetComponent<MeshRenderer>(),
+            module.transform.Find("submitting").transform.Find("submittingField").transform.Find("consoleStartingText")
+                .GetComponent<MeshRenderer>(),
+            module.transform.Find("fileManager").transform.Find("Indicator").transform.Find("top")
+                .GetComponent<MeshRenderer>(),
+            module.transform.Find("fileManager").transform.Find("Indicator").transform.Find("bottom")
+                .GetComponent<MeshRenderer>(),
+            module.transform.Find("fileManager").transform.Find("screen").transform.Find("screen")
+                .GetComponent<MeshRenderer>(),
+        };
+            
+        List<Transform> pins = new List<Transform>
+        {
+            infoPlate.transform.Find("pin1"),
+            infoPlate.transform.Find("pin2"),
+            infoPlate.transform.Find("pin3"),
+        };
+            
+        foreach (var pin in pins)
+        {
+            int children = pin.transform.childCount;
+            for (int i = 0; i < children; ++i)
+                _allObjects.Add(pin.transform.GetChild(i).GetComponent<MeshRenderer>());
+        }
     }
 
     // Changing screen with file names
@@ -368,22 +391,15 @@ public class CommitChanges : MonoBehaviour
         if (status == 0)
         {
             colorText = "Red";
-            color = new Color32(200, 0, 0, 255);
+            color = _colorRed;
         }
         else if (status == 1)
-        {
-            colorText = "Yellow";
-            color = new Color32(200, 200, 0, 255);
-        }
-        else if (status == 2)
-        {
+        {  
             colorText = "Green";
-            color = new Color32(0, 200, 0, 255);
+            color = _colorGreen;
         }
         else
-        {
-            color = new Color32(0, 0, 0, 255);
-        }
+            color = _colorWhite;
 
         foreach (MeshRenderer obj in _indicatorElements)
             obj.material.color = color;
@@ -403,7 +419,7 @@ public class CommitChanges : MonoBehaviour
                 baseValue += GetBase36Number(Char.ToUpper(letter));
             else
                 baseValue += 13;
-        return baseValue % 256;
+        return baseValue % 64;
     }
 
     // Finding value for file coefficient 
@@ -412,111 +428,61 @@ public class CommitChanges : MonoBehaviour
         string fileName = file.Name;
         if (fileName.Any(char.IsDigit))
         {
-            int multiplication = 1;
+            int additon = 0;
             foreach (var symbol in fileName)
             {
                 if (Char.IsDigit(symbol))
                 {
                     if (symbol == '0')
-                        multiplication *= 10;
-                    multiplication *= symbol - '0';
+                    {
+                        additon += 5;
+                        continue;
+                    }
+                    additon += symbol - '0';
                 }
             }
 
-            value += multiplication;
+            value += additon;
         }
 
         if (!_contributorName.All(char.IsLetterOrDigit))
-        {
             value += 50;
-        }
-
-        if (_contributorName.Any(char.IsDigit))
-        {
-            int count = 0;
-            foreach (var symbol in _contributorName)
-            {
-                if (char.IsDigit(symbol))
-                {
-                    count++;
-                }
-            }
-
-            value += (count + 1);
-        }
+        
+        value += 3*_contributorName.Count(char.IsLetter);
 
         int countLowerCaseLetters = 0;
         foreach (char symbol in fileName)
         {
             if (!char.IsLetterOrDigit(symbol))
-                value += 12;
+                value += 9;
             else if (char.IsLower(symbol))
                 countLowerCaseLetters++;
             else if (char.IsUpper(symbol))
                 value += 5;
         }
 
-        if (fileName.Count(symbol => symbol == '.') > 1)
-        {
-            value *= 3;
-        }
-
         if (countLowerCaseLetters > 0)
-        {
-            value -= countLowerCaseLetters * 3;
-        }
-
-        foreach (string ind in bomb.GetIndicators())
-            if (ind.Equals("CLR") ||
-                ind.Equals("FRK") ||
-                ind.Equals("FRQ") ||
-                ind.Equals("NSA"))
-                value += 15;
-
-        if (_contributorName.Any(char.IsUpper))
-        {
-            value -= 20 * _contributorName.Count(char.IsUpper);
-        }
-
-        if (new[] { "Sunday", "Saturday", "Friday" }.Contains(_dayOfWeekName))
-        {
-            value -= 30;
-        }
-        else if (new[] { "Monday", "Wednesday", "Thursday" }.Contains(_dayOfWeekName))
-        {
-            value += 20;
-        }
+            value -= countLowerCaseLetters * 2;
         
-        foreach (string ind in bomb.GetPorts())
-            if (ind.Equals("RJ4") ||
-                ind.Equals("PS2") ||
-                ind.Equals("Serial"))
-                value -= 10;
-
+        if (new[] { "Sunday", "Saturday", "Friday" }.Contains(_dayOfWeekName))
+            value -= 30;
+        
         bool firstRule = false, secondRule = false;
         foreach (var moduleName in bomb.GetModuleNames())
         {
             if (new[] { "Scripting", "Brainf---", "Markscript" }.Contains(moduleName) && !firstRule)
-            {
                 firstRule = true;
-            }
 
-            if (new[]{ "Mortal Kombat", "Etterna", "Geometry Dash", "Sonic the Hedgehog" }.Contains(moduleName) &&
-                !secondRule)
-            {
+            if (new[]{ "Mortal Kombat", "Etterna", "Geometry Dash", "Sonic the Hedgehog" }.Contains(moduleName)
+                && !secondRule)
                 secondRule = true;
-            }
         }
 
         if (firstRule)
-        {
-            value += 69;
-        }
+            value += 33;
 
         if (secondRule)
-        {
             value /= 2;
-        }
 
         return value < 0 ? -value : value;
     }
@@ -525,24 +491,22 @@ public class CommitChanges : MonoBehaviour
     {
         Dictionary<int, double> statuses = new Dictionary<int, double>()
         {
-            { 0, 0.75 },
-            { 1, 1.5 },
-            { 2, 3 }
+            { 0, bomb.GetSerialNumberNumbers().Min() / (double)bomb.GetSerialNumberNumbers().Max() },
+            { 1, bomb.GetSerialNumberNumbers().Sum() % 3 + 1.5 }
         };
         return statuses[color];
     }
 
     // Finding repo coefficient 
-    private double Find_repositoryCoefficient()
+    private double FindRepositoryCoefficient()
     {
         int sumALlLetters = 0;
         foreach (char letter in _repositoryName)
         {
             sumALlLetters += GetAlphabeticPosition(letter);
         }
-
-        int coefficient = sumALlLetters % (2 * _repositoryName.Length) + 1;
-        return coefficient;
+        
+        return sumALlLetters % (2 * _repositoryName.Length) + 1;
     }
 
     // Finding day of week coefficient 
@@ -602,23 +566,23 @@ public class CommitChanges : MonoBehaviour
         {
             _inputtedFiles = new List<Files>();
             _currentCommittingFile = null;
-            _commands += "Your repository has been reset to \\initial state...";
+            _commands += "Your repository has been reset to /initial state...";
         }
         else if (command.StartsWith("git reset head"))
         {
             _currentCommittingFile = null;
-            _commands += "Your repository have been returned to current commit.";
+            _commands += "Your repository have been returned to /current commit.";
         }
         else if (command.StartsWith("git status"))
-        {
+        {  
             if (_currentCommittingFile != null)
             {
-                _commands += String.Format("Added file {0} (status {1})", _currentCommittingFile.Name,
+                _commands += String.Format("New file {0} (status {1})", _currentCommittingFile.Name,
                     _currentCommittingFile.Status);
             }
             else
             {
-                _commands += "No files file yet...";
+                _commands += "Commit is clear...";
             }
         }
         else if (command.StartsWith("git commit"))
@@ -626,7 +590,7 @@ public class CommitChanges : MonoBehaviour
             if (_currentCommittingFile == null)
             {
                 Incorrect();
-                _commands += "Count files in commit is wrong. \\Please try again...";
+                _commands += "Count files in commit is wrong. /Please try again...";
             }
             else
             {
@@ -643,6 +607,7 @@ public class CommitChanges : MonoBehaviour
             {
                 _commands += "Github isn't responding./";
                 Solve();
+                return;
             }
             if (_answerFiles.Count != _inputtedFiles.Count)
             {
@@ -659,9 +624,10 @@ public class CommitChanges : MonoBehaviour
                     _commands += "Strike... Wrong file is #" + (index + 1) + " file./";
                     return;
                 }
-                _commands += "Changes have been pushed./";
-                Solve();
             }
+            _commands += "Changes have been pushed./";
+            Solve();
+            return;
         }
         else if (command.StartsWith("git add"))
         {
@@ -702,8 +668,6 @@ public class CommitChanges : MonoBehaviour
                 _commands += "No such file found./";
                 return;
             }
-
-            _currentCommittingFile.Status = 1;
             _commands += "File added.";
         }
         else if (command.StartsWith("git rm"))
@@ -740,9 +704,16 @@ public class CommitChanges : MonoBehaviour
                 _commands += "No such file found.";
                 return;
             }
-
-            _currentCommittingFile.Status = 0;
             _commands += "File removed.";
+        }
+        else if (command.StartsWith("git log"))
+        {
+            string files = "";
+            foreach (var file in _answerFiles)
+            {
+                files += String.Format("{0}, {1};/", file.Name, file.Status);
+            }
+            _commands += files;
         }
         else
         {
@@ -755,22 +726,24 @@ public class CommitChanges : MonoBehaviour
     // Handle strike
     private void Incorrect()
     {
-        Log("Something wrong. Strike!");
+        Log("Something went wrong. Strike...");
         module.HandleStrike();
     }
 
     // Solve module
     private void Solve()
     {
-        Log("Entered correct answer. module solved!");
+        Log("Entered correct answer. Module solved!");
+        sound.PlaySoundAtTransform(_sounds["SolvingSound"], module.transform);
         module.HandlePass();
         _isSolved = true;
+        _isTyping = false;
     }
 
     // Logging function
     private void Log(string log)
     {
-        Debug.LogFormat("[GitCommiting #{0}] {1}", _moduleID, log);
+        Debug.LogFormat("[CommitChanges #{0}] {1}", _moduleID, log);
     }
 
     private IEnumerator WaitFor(float seconds)
@@ -789,8 +762,7 @@ public class CommitChanges : MonoBehaviour
             if (key == KeyCode.Backspace)
                 _userInput = _userInput.Substring(0, _userInput.Length - 1);
     
-        if (_userInput.Length >= _maxLengthInput && key != KeyCode.Return)
-            return;
+        if (_userInput.Length >= _maxLengthInput && key != KeyCode.Return) return;
         
         if ((key >= KeyCode.A && key <= KeyCode.Z) 
             || key == KeyCode.Space 
@@ -802,18 +774,12 @@ public class CommitChanges : MonoBehaviour
             || (key == KeyCode.Backspace && _userInput.Length != 0))
             sound.PlaySoundAtTransform(_sounds["keyPressed"], module.transform);
         
-        if (key >= KeyCode.A && key <= KeyCode.Z)
-            _userInput += key.ToString().ToLower();
-        if (key == KeyCode.Space)
-            _userInput += " ";
-        if (key >= KeyCode.Keypad0 && key <= KeyCode.Keypad9) 
-            key = KeyCode.Alpha0 + (key - KeyCode.Keypad0);
-        if (key >= KeyCode.Alpha0 && key <= KeyCode.Alpha9)
-            _userInput += key - KeyCode.Alpha0;
-        if (key == KeyCode.Minus || key == KeyCode.KeypadMinus)
-            _userInput += '-';
-        if (key == KeyCode.KeypadPeriod || key == KeyCode.Period)
-            _userInput += '.';
+        if (key >= KeyCode.A && key <= KeyCode.Z) _userInput += key.ToString().ToLower();
+        if (key == KeyCode.Space) _userInput += " ";
+        if (key >= KeyCode.Keypad0 && key <= KeyCode.Keypad9) key = KeyCode.Alpha0 + (key - KeyCode.Keypad0);
+        if (key >= KeyCode.Alpha0 && key <= KeyCode.Alpha9) _userInput += key - KeyCode.Alpha0;
+        if (key == KeyCode.Minus || key == KeyCode.KeypadMinus) _userInput += '-';
+        if (key == KeyCode.KeypadPeriod || key == KeyCode.Period) _userInput += '.';
         
         if (key == KeyCode.Return)
         {
@@ -824,25 +790,18 @@ public class CommitChanges : MonoBehaviour
 
             if (_amountLines > _maxLinesLength)
             {
-                for (int i = 0; i < 2; i++)
-                {
-                    _commands = _commands.Substring(_commands.IndexOf('/') + 1);
-                }
-
+                for (int i = 0; i < 2; i++) _commands = _commands.Substring(_commands.IndexOf('/') + 1);
                 _amountLines--;
             }
             foreach (var str in _commands)
             {
                 if (str == '/')
-                {
                     _consoleText += "\n> ";
-                }
                 else
-                {
                     _consoleText += str;
-                }
             }
         }
+        
         consoleTM.text = _consoleText + _userInput;
     }
     void OnGUI()
@@ -854,5 +813,59 @@ public class CommitChanges : MonoBehaviour
             return;
         ButtonPressed(e.keyCode);
         StartCoroutine(WaitFor(0.5f));
+    }
+    
+#pragma warning disable 414
+    private readonly string TwitchHelpMessage = @"Use !{0} right/left/cycle to watch files. !{0} console to open console. !{0} [command] to enter [command] in console. After entering command automatically inputting a enter.";
+#pragma warning restore 414
+
+    public IEnumerator ProcessTwitchCommand (string command) {
+        if (!Regex.IsMatch(command, @"^[a-zA-Z0-9. ]{2,40}$"))
+        {
+            yield return "sendtochat {0}, {1}: Unknown characters or wrong length of command";
+            yield break;
+        }
+        if (command.StartsWith("cycle"))
+        {
+            for (int i = 0; i < _answerFiles.Count; i++)
+            {
+                yield return new WaitForSeconds(5f);
+                btnNext.OnInteract();
+            }
+            yield break;
+        }
+        if (command.StartsWith("left"))
+        {
+            btnPrev.OnInteract();
+            yield break;
+        }
+        if (command.StartsWith("right"))
+        {
+            btnNext.OnInteract();
+            yield break;
+        }
+        if (command.StartsWith("console"))
+        {
+            btnSubmit.OnInteract();
+            yield break;
+        }
+        foreach (var startOfCommand in _possiblesCommands)
+        {
+            if (command.StartsWith(startOfCommand))
+            {
+                if (_isConsoleOpen)
+                    HandleCommand(command);
+                else
+                    yield return "sendtochat {0}, use `!{1} console` to open console";
+                yield break;
+            }
+        }
+        yield return "sendtochat {0}, {1}: Unknown command. To watch help message use !{1} help";
+    }
+
+    public void TwitchHandleForcedSolve () {
+        if (_isSolved) return;
+        Log("Module force-solved");
+        Solve();
     }
 }
